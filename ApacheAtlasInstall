@@ -1,0 +1,16 @@
+The set of instructions are here https://github.com/apache/atlas but there are some gaps
+
+# Download the sources file https://apache.claz.org/atlas/2.1.0/apache-atlas-2.1.0-sources.tar.gz from here
+
+And, later install maven, Java
+
+sudo amazon-linux-extras install java-openjdk11
+
+alternatives --config java and select the latest java version
+
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+# This step takes a lot of time
+mvn --version based on these instructions from https://gist.github.com/sebsto/19b99f1fa1f32cae5d00
+
